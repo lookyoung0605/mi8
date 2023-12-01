@@ -69,6 +69,8 @@ export default function App() {
 
       console.log("data");
       console.log(response.data);
+      localStorage.setItem("token", response.data.result.AccessToken);
+      localStorage.setItem("id", response.data.result.userId);
     } catch (error) {
       console.log("error");
       console.log(error);
